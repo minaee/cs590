@@ -1,0 +1,30 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/shahriar/cpp/cs590/header/Server.h
+netinet/in.h
+-
+stdio.h
+-
+stdlib.h
+-
+string.h
+-
+sys/socket.h
+-
+unistd.h
+-
+thread
+-
+
+/home/shahriar/cpp/cs590/source/Server.cpp
+../header/Server.h
+/home/shahriar/cpp/cs590/header/Server.h
+string
+-
+

@@ -1,0 +1,1 @@
+/home/linuxbrew/.linuxbrew/bin/g++-11  -g  -rdynamic CMakeFiles/cs590.dir/main.cpp.o  -o cs590  -Wl,-rpath,/home/shahriar/cpp/cs590/build libsrc.so 
