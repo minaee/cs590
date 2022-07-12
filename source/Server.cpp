@@ -6,7 +6,7 @@ using namespace Serv;
 Server::Server(/* args*/)
 {
     Server::InitMasterSocket();
-    thread_obj = new std::thread(Server::Run);
+    thread_obj = new std::thread(Run);
 }
 
 Server::~Server()
@@ -17,7 +17,7 @@ Server::~Server()
 }
 
 void Server::InitMasterSocket(){
-    struct sockaddr_in address;
+    // struct sockaddr_in address;
     int opt = 1;
     int addrlen = sizeof(address);
     

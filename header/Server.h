@@ -20,14 +20,14 @@ namespace Serv
             int server_fd, new_socket, valread;
             bool IsRunning = true;
             std::thread* thread_obj;
+            struct sockaddr_in address;
+
 
         public:
             Server(/* args */);
             ~Server();
         private:
-            void InitMasterSocket(){
-                struct sockaddr_in address;
-            };
+            void InitMasterSocket();
             
             void DesMasterSocket();
             void Run();
