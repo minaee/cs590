@@ -8,6 +8,11 @@
 #include <sys/socket.h>
 #include <unistd.h>
 #include <thread>
+#include <mutex>
+#include <condition_variable>
+#include <chrono>
+#include <iostream>
+#include <queue>
 
 #define PORT 8080
 
@@ -19,9 +24,13 @@ namespace Serv
         private:
             int server_fd, new_socket, valread;
             bool IsRunning = true;
-            std::thread* thread_obj;
-            struct sockaddr_in address;
+            std::thread thread_obj;
 
+            // std::thread mThread;
+            std::condition_variable mCV;
+            std::mutex mMutex;
+            std::queue<std::string> mQueue;
+            bool mStop;
 
         public:
             Server(/* args */);

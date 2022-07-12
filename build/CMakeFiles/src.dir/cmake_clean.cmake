@@ -1,4 +1,5 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/src.dir/source/Client.cpp.o"
   "CMakeFiles/src.dir/source/Server.cpp.o"
   "libsrc.pdb"
   "libsrc.so"

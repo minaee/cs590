@@ -560,6 +560,33 @@ main.cpp.s:
 	$(MAKE) -f CMakeFiles/cs590.dir/build.make CMakeFiles/cs590.dir/main.cpp.s
 .PHONY : main.cpp.s
 
+source/Client.o: source/Client.cpp.o
+
+.PHONY : source/Client.o
+
+# target to build an object file
+source/Client.cpp.o:
+	$(MAKE) -f CMakeFiles/src.dir/build.make CMakeFiles/src.dir/source/Client.cpp.o
+.PHONY : source/Client.cpp.o
+
+source/Client.i: source/Client.cpp.i
+
+.PHONY : source/Client.i
+
+# target to preprocess a source file
+source/Client.cpp.i:
+	$(MAKE) -f CMakeFiles/src.dir/build.make CMakeFiles/src.dir/source/Client.cpp.i
+.PHONY : source/Client.cpp.i
+
+source/Client.s: source/Client.cpp.s
+
+.PHONY : source/Client.s
+
+# target to generate assembly for a file
+source/Client.cpp.s:
+	$(MAKE) -f CMakeFiles/src.dir/build.make CMakeFiles/src.dir/source/Client.cpp.s
+.PHONY : source/Client.cpp.s
+
 source/Server.o: source/Server.cpp.o
 
 .PHONY : source/Server.o
@@ -631,6 +658,9 @@ help:
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
+	@echo "... source/Client.o"
+	@echo "... source/Client.i"
+	@echo "... source/Client.s"
 	@echo "... source/Server.o"
 	@echo "... source/Server.i"
 	@echo "... source/Server.s"

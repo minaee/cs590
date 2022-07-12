@@ -15,6 +15,9 @@ target_include_directories(src PUBLIC "${CMAKE_CURRENT_SOURCE_DIR}/header")
 add_executable(cs590 main.cpp)
 target_link_libraries(cs590 src)
 
+SET(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -pthread")
+SET(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -fpermissive")
+
 set(CPACK_PROJECT_NAME ${PROJECT_NAME})
 set(CPACK_PROJECT_VERSION ${PROJECT_VERSION})
 include(CPack)

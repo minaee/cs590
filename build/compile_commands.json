@@ -1,12 +1,17 @@
 [
 {
   "directory": "/home/shahriar/cpp/cs590/build",
-  "command": "/home/linuxbrew/.linuxbrew/bin/g++-11   -I/home/shahriar/cpp/cs590/header  -g   -o CMakeFiles/cs590.dir/main.cpp.o -c /home/shahriar/cpp/cs590/main.cpp",
+  "command": "/home/linuxbrew/.linuxbrew/bin/g++-11   -I/home/shahriar/cpp/cs590/header   -pthread -fpermissive -g   -o CMakeFiles/cs590.dir/main.cpp.o -c /home/shahriar/cpp/cs590/main.cpp",
   "file": "/home/shahriar/cpp/cs590/main.cpp"
 },
 {
   "directory": "/home/shahriar/cpp/cs590/build",
-  "command": "/home/linuxbrew/.linuxbrew/bin/g++-11  -Dsrc_EXPORTS -I/home/shahriar/cpp/cs590/header  -g -fPIC   -o CMakeFiles/src.dir/source/Server.cpp.o -c /home/shahriar/cpp/cs590/source/Server.cpp",
+  "command": "/home/linuxbrew/.linuxbrew/bin/g++-11  -Dsrc_EXPORTS -I/home/shahriar/cpp/cs590/header   -pthread -fpermissive -g -fPIC   -o CMakeFiles/src.dir/source/Client.cpp.o -c /home/shahriar/cpp/cs590/source/Client.cpp",
+  "file": "/home/shahriar/cpp/cs590/source/Client.cpp"
+},
+{
+  "directory": "/home/shahriar/cpp/cs590/build",
+  "command": "/home/linuxbrew/.linuxbrew/bin/g++-11  -Dsrc_EXPORTS -I/home/shahriar/cpp/cs590/header   -pthread -fpermissive -g -fPIC   -o CMakeFiles/src.dir/source/Server.cpp.o -c /home/shahriar/cpp/cs590/source/Server.cpp",
   "file": "/home/shahriar/cpp/cs590/source/Server.cpp"
 }
 ]

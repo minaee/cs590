@@ -1,23 +1,30 @@
-#include "../header/Server.h"
+#include <iostream>
 #include <string>
+
+#include "../header/Server.h"
 
 using namespace Serv;
 
 Server::Server(/* args*/)
 {
     Server::InitMasterSocket();
-    thread_obj = new std::thread(Run);
+    // thread_obj = new std::thread(Run);
+    thread_obj = std::thread(&Server::Run, this); //create thread and execute Run()
 }
 
 Server::~Server()
 {
     DesMasterSocket();
-    thread_obj->join();
-    delete thread_obj;
+    // thread_obj->join();
+    // delete thread_obj;
+    //Join thread
+    if (thread_obj.joinable()) {
+        thread_obj.join();
+    }
 }
 
 void Server::InitMasterSocket(){
-    // struct sockaddr_in address;
+    struct sockaddr_in address;
     int opt = 1;
     int addrlen = sizeof(address);
     
@@ -77,7 +84,8 @@ void Server::Run(){
         std::string hello = "Hello from server";
         
         valread = read(new_socket, buffer, 1024);
-        printf("%s\n", buffer);
+        std::cout<<buffer<<std::endl;
+
         send(new_socket, hello.c_str(), strlen(hello.c_str()), 0);
         printf("Hello message sent\n");
     }
